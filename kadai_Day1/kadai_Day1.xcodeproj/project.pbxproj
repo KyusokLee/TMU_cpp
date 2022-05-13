@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		945BDB87282D11510040CE9C /* kadai1_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 945BDB86282D11510040CE9C /* kadai1_1.cpp */; };
 		945BDB94282D29F50040CE9C /* kadai1_3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 945BDB92282D29F50040CE9C /* kadai1_3.cpp */; };
+		94BE5230282E175400F96C44 /* kadai2_0_and_2_1_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94BE522F282E175400F96C44 /* kadai2_0_and_2_1_1.cpp */; };
+		94BE5232282E22D000F96C44 /* kadai_2_1_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94BE5231282E22D000F96C44 /* kadai_2_1_2.cpp */; };
+		94BE5234282E2CB700F96C44 /* kadai2_2_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94BE5233282E2CB700F96C44 /* kadai2_2_1.cpp */; };
+		94BE5236282E36C400F96C44 /* kadai_2_2_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94BE5235282E36C400F96C44 /* kadai_2_2_2.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +32,10 @@
 		945BDB86282D11510040CE9C /* kadai1_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kadai1_1.cpp; sourceTree = "<group>"; };
 		945BDB92282D29F50040CE9C /* kadai1_3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kadai1_3.cpp; sourceTree = "<group>"; };
 		945BDB93282D29F50040CE9C /* kadai1_2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kadai1_2.hpp; sourceTree = "<group>"; };
+		94BE522F282E175400F96C44 /* kadai2_0_and_2_1_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kadai2_0_and_2_1_1.cpp; sourceTree = "<group>"; };
+		94BE5231282E22D000F96C44 /* kadai_2_1_2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kadai_2_1_2.cpp; sourceTree = "<group>"; };
+		94BE5233282E2CB700F96C44 /* kadai2_2_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kadai2_2_1.cpp; sourceTree = "<group>"; };
+		94BE5235282E36C400F96C44 /* kadai_2_2_2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kadai_2_2_2.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				945BDB86282D11510040CE9C /* kadai1_1.cpp */,
 				945BDB93282D29F50040CE9C /* kadai1_2.hpp */,
 				945BDB92282D29F50040CE9C /* kadai1_3.cpp */,
+				94BE522F282E175400F96C44 /* kadai2_0_and_2_1_1.cpp */,
+				94BE5231282E22D000F96C44 /* kadai_2_1_2.cpp */,
+				94BE5233282E2CB700F96C44 /* kadai2_2_1.cpp */,
+				94BE5235282E36C400F96C44 /* kadai_2_2_2.cpp */,
 			);
 			path = kadai_Day1;
 			sourceTree = "<group>";
@@ -124,8 +136,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94BE5230282E175400F96C44 /* kadai2_0_and_2_1_1.cpp in Sources */,
 				945BDB94282D29F50040CE9C /* kadai1_3.cpp in Sources */,
+				94BE5232282E22D000F96C44 /* kadai_2_1_2.cpp in Sources */,
 				945BDB87282D11510040CE9C /* kadai1_1.cpp in Sources */,
+				94BE5234282E2CB700F96C44 /* kadai2_2_1.cpp in Sources */,
+				94BE5236282E36C400F96C44 /* kadai_2_2_2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
