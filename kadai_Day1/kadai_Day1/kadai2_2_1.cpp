@@ -21,7 +21,6 @@ double rnd_val2_2_1(int input) {
     return returnValue;
 }
 
-
 // サイコロクラス
 class dice {
 public:

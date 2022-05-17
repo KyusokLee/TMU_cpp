@@ -43,9 +43,14 @@ public:
 // N = 2 ~ 10までチェックした
 // 中心極限利用
 // ファイル入出力あり
-int main() {
+int main_2_2_2() {
     FILE *kadai2_DICE_N = fopen("kadai2_2DICE_N", "wb");
-    FILE *kadai2_frequency = fopen("kadai2_frequency", "wb");
+    ofstream kadai2_checkFrequency("kadai2_checkFrequency.csv");
+    
+    for (int i = 0; i < 61; i++) {
+        kadai2_checkFrequency << i << ",";
+    }
+    kadai2_checkFrequency << endl;
     
     dice diceN;
     srand(20141106);
@@ -54,7 +59,7 @@ int main() {
     int count = 0; //試行回数
     int diceSum = 0; // n個のサイコロの和
     int startCases = 10000;
-    int diceSumCount[61] = {0}; // 9個のサイコロの和の頻度を格納する配列 (0)に初期化
+    int diceSumCount[9][61] = {0}; // 9個のサイコロの和の頻度を格納する配列 ( [サイコロの個数][サイコロの和] )
     double tempSum = 0.0; //２つのサイコロの和の合算 (試行回数をある値に固定したとき)
     double averageSum = 0.0; //２つのサイコロの和の平均 (試行回数をある値に固定したとき)
     
@@ -67,21 +72,24 @@ int main() {
                     diceN.Roll();
                     diceSum += diceN.value;
                 }
-                diceSumCount[diceSum] += 1;
+                diceSumCount[diceCount - 2][diceSum] += 1;
                 tempSum += diceSum;
             }
             averageSum = tempSum / count; //平均値を計算
             fprintf(kadai2_DICE_N, "%d, %d, %d, %f\n", diceCount, count, diceSum, averageSum);
             //サイコロの個数、試行回数、n個のサイコロの和、平均値を出力
         }
-        
-        for (int k = 0; k < 61; k++) {
-            fprintf(kadai2_frequency, "%d, %d\n", k, diceSumCount[k]);
-            diceSumCount[k] = 0;
-        }
     }
     fclose(kadai2_DICE_N);
-    fclose(kadai2_frequency);
+    
+    for (int row = 0; row < 9; row++) {
+        for (int column = 0; column < 61; column++) {
+            kadai2_checkFrequency << diceSumCount[row][column] << ",";
+        }
+        kadai2_checkFrequency << endl;
+    }
+    
+    kadai2_checkFrequency.close();
     
     return 0;
 }
