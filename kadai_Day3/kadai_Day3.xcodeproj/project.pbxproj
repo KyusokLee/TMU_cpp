@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9487A7EF283C70F600EA8523 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9487A7EE283C70F600EA8523 /* main.cpp */; };
+		9487A7EF283C70F600EA8523 /* kadaiDay3_singleServer_cashRegister.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9487A7EE283C70F600EA8523 /* kadaiDay3_singleServer_cashRegister.cpp */; };
+		94F71A842844C91C00F18532 /* kadaiDay3_doubleServer_cashRegister.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94F71A832844C91C00F18532 /* kadaiDay3_doubleServer_cashRegister.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,8 @@
 
 /* Begin PBXFileReference section */
 		9487A7EB283C70F600EA8523 /* kadai_Day3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = kadai_Day3; sourceTree = BUILT_PRODUCTS_DIR; };
-		9487A7EE283C70F600EA8523 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9487A7EE283C70F600EA8523 /* kadaiDay3_singleServer_cashRegister.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kadaiDay3_singleServer_cashRegister.cpp; sourceTree = "<group>"; };
+		94F71A832844C91C00F18532 /* kadaiDay3_doubleServer_cashRegister.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kadaiDay3_doubleServer_cashRegister.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 		9487A7ED283C70F600EA8523 /* kadai_Day3 */ = {
 			isa = PBXGroup;
 			children = (
-				9487A7EE283C70F600EA8523 /* main.cpp */,
+				9487A7EE283C70F600EA8523 /* kadaiDay3_singleServer_cashRegister.cpp */,
+				94F71A832844C91C00F18532 /* kadaiDay3_doubleServer_cashRegister.cpp */,
 			);
 			path = kadai_Day3;
 			sourceTree = "<group>";
@@ -119,7 +122,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9487A7EF283C70F600EA8523 /* main.cpp in Sources */,
+				9487A7EF283C70F600EA8523 /* kadaiDay3_singleServer_cashRegister.cpp in Sources */,
+				94F71A842844C91C00F18532 /* kadaiDay3_doubleServer_cashRegister.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

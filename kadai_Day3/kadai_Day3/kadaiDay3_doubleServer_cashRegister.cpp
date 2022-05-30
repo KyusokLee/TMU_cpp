@@ -1,8 +1,10 @@
 //
-//  main.cpp
+//  kadaiDay3_doubleServer_cashRegister.cpp
 //  kadai_Day3
 
-// Simulation Experiment Day3_Assignments n.1
+
+// Simulation Experiment Day3_Assignments n.2
+// レジ２台の実現 (Server : 2個)
 #include <stdio.h>
 #include <iostream>
 #include <stdlib.h>
@@ -14,8 +16,8 @@
 
 using namespace std;
 
-double rnd_val(); //一様乱数
-double rnd_exp(double lambda); //指数分布乱数
+double rnd_val2(); //一様乱数
+double rnd_exp2(double lambda); //指数分布乱数
 
 //Person クラス
 class Person {
@@ -68,7 +70,7 @@ public:
             // 受け入れ可能のとき
             personalData = _personalData; //受け入れた客のポインタメンバ変数に代入
             personalData->serverID = serverID; //受け入れた客のServerIDにメンバ変数であるサーバーIDを書き込む
-            finishTime = curTime + rnd_exp(mu); //客の利用時間を計算 -> メンバ変数である利用終了時間を更新
+            finishTime = curTime + rnd_exp2(mu); //客の利用時間を計算 -> メンバ変数である利用終了時間を更新
             isAvailable = false; //客の利用が終了となってため、受け入れ不可能とする
             return 1; //受け入れ可能であることを通知
         } else {
@@ -119,11 +121,11 @@ int main() {
     priority_queue<Event> evPriorityQueue;
     srand((unsigned int)time(NULL)); //乱数生成シード: time間数を用いて現在時間をシードとして利用
 
-    double lambda = 4.0; // lambdaの設定
+    double lambda = 2.0; // lambdaの設定
     int numPerson = 0;
     const int totalPerson = 10000;
-    double mu = 2.0; //サーバー利用時間のパラメタ.平均利用時間: 1 / mu
-    int numServer = 1;
+    double mu = 12.0; //サーバー利用時間のパラメタ.平均利用時間: 1 / mu
+    int numServer = 2; //今回はserverを２台設ける
 
     Person *persons = new Person[totalPerson + 1];
     Server **svr;
@@ -174,7 +176,7 @@ int main() {
             }
 
             numPerson++;
-            persons[numPerson].setPersonProperty(numPerson, curEvent.eventOccurTime + rnd_exp(lambda), UNDEFINED, UNDEFINED);
+            persons[numPerson].setPersonProperty(numPerson, curEvent.eventOccurTime + rnd_exp2(lambda), UNDEFINED, UNDEFINED);
             evPriorityQueue.push(Event(eventID++, persons[numPerson].arrivalTime, EVENT_ARRIVAL, &persons[numPerson], NULL));
             break;
 
@@ -202,13 +204,13 @@ int main() {
 }
 
 // rand()を用いて偏りのない[0,1]範囲の一様乱数を発生させる関数
-double rnd_val() {
+double rnd_val2() {
     double returnValue = (double(rand()) + 0.5) / (RAND_MAX + 1.0);
     return returnValue;
 }
 
 // rnd_val()を用いた指数分布乱数
-double rnd_exp(double lambda) {
-    return -1.0 / lambda * log(rnd_val());
+double rnd_exp2(double lambda) {
+    return -1.0 / lambda * log(rnd_val2());
 //    return (-1 * log(1.0 - rnd_val())) / lambda;
 }
